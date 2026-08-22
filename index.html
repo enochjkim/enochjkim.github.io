@@ -4,242 +4,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Enoch Kim | Aerospace Engineer</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo">ENOCH KIM</div>
-
-            <div>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">EK</div>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="cta-btn">Contact</a>
             </div>
         </div>
     </nav>
 
-
     <!-- Hero -->
     <main>
-
         <section class="hero">
-            <div class="container">
-
-                <h1>
-                    Aerospace<br>
-                    Engineering.
-                </h1>
-
-                <p>
-                    Aerospace engineering student at UC Irvine
-                    building systems across propulsion, structures,
-                    aerodynamics, and composites.
-                </p>
-
+            <div class="hero-content">
+                <div class="hero-label">Aerospace Engineer</div>
+                <h1>Building advanced aerospace systems</h1>
+                <p>Propulsion • Structures • Aerodynamics • Manufacturing</p>
+                <a href="#work" class="hero-cta">View Work</a>
+            </div>
+            <div class="hero-visual">
+                <div class="grid-bg"></div>
             </div>
         </section>
 
-
-        <!-- Projects -->
-        <section id="projects">
-
-            <div class="container">
-
-                <div class="section-title">
-                    Selected Projects
-                </div>
-
-                <div class="projects">
-
-                    <div class="project">
-                        <h3>MOCH4</h3>
-
-                        <p>
-                            Methalox liquid rocket developed through
-                            UCI Rocket Project. Work spanning propulsion,
-                            structures, aerodynamics, and vehicle design.
-                        </p>
+        <!-- Work Section -->
+        <section id="work" class="work">
+            <div class="section-container">
+                <h2>Selected Work</h2>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-tag">Propulsion</div>
+                        <h3>MOCH4 Liquid Rocket</h3>
+                        <p>Methalox-powered rocket developed at UCI. Full-stack integration across propulsion systems, structural analysis, aerodynamic design, and vehicle integration.</p>
+                        <div class="project-tech">
+                            <span>Propulsion</span>
+                            <span>Structures</span>
+                            <span>Aerodynamics</span>
+                        </div>
                     </div>
 
-
-                    <div class="project">
+                    <div class="project-card">
+                        <div class="project-tag">Structures</div>
                         <h3>Composite Fin Can</h3>
-
-                        <p>
-                            Designed and analyzed a composite rocket
-                            fin can using CFD, FEA, and composite
-                            laminate analysis.
-                        </p>
+                        <p>High-performance composite rocket fin can. Advanced analysis using CFD for aerodynamics, FEA for structural validation, and composite laminate theory.</p>
+                        <div class="project-tech">
+                            <span>CFD</span>
+                            <span>FEA</span>
+                            <span>Composites</span>
+                        </div>
                     </div>
 
-
-                    <div class="project">
+                    <div class="project-card">
+                        <div class="project-tag">Manufacturing</div>
                         <h3>NASA SUMAC</h3>
-
-                        <p>
-                            Composite manufacturing research conducted
-                            at NASA Langley Research Center.
-                        </p>
+                        <p>Advanced composite manufacturing research at NASA Langley Research Center. Focused on aerospace-grade structure production and material characterization.</p>
+                        <div class="project-tech">
+                            <span>Manufacturing</span>
+                            <span>Materials</span>
+                            <span>Research</span>
+                        </div>
                     </div>
 
-
-                    <div class="project">
+                    <div class="project-card">
+                        <div class="project-tag">Aerodynamics</div>
                         <h3>Anteater Formula Racing</h3>
-
-                        <p>
-                            Aerodynamics engineering for UCI's Formula
-                            SAE vehicle, including aerodynamic development
-                            and analysis.
-                        </p>
+                        <p>Aerodynamics lead for UCI's Formula SAE competition vehicle. Developed downforce concepts, performed CFD analysis, and optimized vehicle dynamics.</p>
+                        <div class="project-tech">
+                            <span>Aerodynamics</span>
+                            <span>CFD</span>
+                            <span>Vehicle Dynamics</span>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
+        <!-- Experience Section -->
+        <section id="about" class="about">
+            <div class="section-container">
+                <h2>Experience & Leadership</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Chief Engineer</h3>
+                            <p class="role">UCI Rocket Project</p>
+                            <p>Leading full development cycle of student-built methalox liquid rocket. Managing propulsion, structures, aerodynamics, avionics, and vehicle integration teams.</p>
+                        </div>
+                    </div>
 
-        <!-- Experience -->
-        <section id="experience">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Composite Manufacturing</h3>
+                            <p class="role">NASA Langley Research Center</p>
+                            <p>Advanced research in aerospace composite manufacturing. Worked on next-gen structural materials and production processes.</p>
+                        </div>
+                    </div>
 
-            <div class="container">
-
-                <div class="section-title">
-                    Experience
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Aerodynamics Engineer</h3>
+                            <p class="role">Anteater Formula Racing</p>
+                            <p>Designed and analyzed aerodynamic systems for high-performance race vehicle. Optimized for downforce and efficiency.</p>
+                        </div>
+                    </div>
                 </div>
 
-
-                <div class="experience-item">
-
-                    <div>
-                        <h3>UCI Rocket Project</h3>
-                        <p>Chief Engineer</p>
+                <div class="skills-section">
+                    <h3>Technical Stack</h3>
+                    <div class="skills">
+                        <span class="skill-badge">Siemens NX</span>
+                        <span class="skill-badge">SolidWorks</span>
+                        <span class="skill-badge">ANSYS</span>
+                        <span class="skill-badge">ANSYS Fluent</span>
+                        <span class="skill-badge">CFD Analysis</span>
+                        <span class="skill-badge">FEA</span>
+                        <span class="skill-badge">Composite Design</span>
+                        <span class="skill-badge">MATLAB</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">C++</span>
                     </div>
-
-                    <div>
-                        <p>
-                            Leading development of a student-built
-                            methalox liquid rocket, coordinating
-                            propulsion, structures, aerodynamics,
-                            avionics, and vehicle integration.
-                        </p>
-                    </div>
-
                 </div>
-
-
-                <div class="experience-item">
-
-                    <div>
-                        <h3>NASA Langley Research Center</h3>
-                        <p>Composite Manufacturing</p>
-                    </div>
-
-                    <div>
-                        <p>
-                            Worked on composite manufacturing research
-                            involving advanced aerospace structures
-                            and manufacturing processes.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="experience-item">
-
-                    <div>
-                        <h3>Anteater Formula Racing</h3>
-                        <p>Aerodynamics Engineer</p>
-                    </div>
-
-                    <div>
-                        <p>
-                            Developed aerodynamic concepts and analysis
-                            for a Formula SAE race car.
-                        </p>
-                    </div>
-
-                </div>
-
             </div>
-
         </section>
 
-
-        <!-- Skills -->
-        <section>
-
-            <div class="container">
-
-                <div class="section-title">
-                    Technical Skills
-                </div>
-
-                <div class="skills">
-
-                    <span class="skill">Siemens NX</span>
-                    <span class="skill">SolidWorks</span>
-                    <span class="skill">ANSYS</span>
-                    <span class="skill">ANSYS Fluent</span>
-                    <span class="skill">CFD</span>
-                    <span class="skill">FEA</span>
-                    <span class="skill">Composite Structures</span>
-                    <span class="skill">MATLAB</span>
-                    <span class="skill">Python</span>
-                    <span class="skill">C++</span>
-
-                </div>
-
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-container">
+                <h2>Get in Touch</h2>
+                <p class="contact-subtitle">Interested in aerospace, advanced manufacturing, propulsion systems, or high-performance engineering.</p>
+                <a href="mailto:ocenochkim@gmail.com" class="contact-btn">ocenochkim@gmail.com</a>
             </div>
-
         </section>
-
-
-        <!-- Contact -->
-        <section id="contact">
-
-            <div class="container">
-
-                <div class="section-title">
-                    Contact
-                </div>
-
-                <h2>
-                    Let's build something.
-                </h2>
-
-                <p>
-                    I'm interested in aerospace engineering,
-                    advanced manufacturing, propulsion, and
-                    high-performance systems.
-                </p>
-
-                <br>
-
-                <a href="mailto:ocenochkim@gmail.com">
-                    ocenochkim@gmail.com
-                </a>
-
-            </div>
-
-        </section>
-
     </main>
 
-
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2026 Enoch Kim</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Enoch Kim</p>
         </div>
     </footer>
 
