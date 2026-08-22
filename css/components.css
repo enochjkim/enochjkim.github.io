@@ -1,0 +1,143 @@
+.projects {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
+    padding: 48px;
+    position: relative;
+    transition: border-color .2s ease, transform .2s ease;
+}
+
+.project:hover {
+    border-color: var(--yellow);
+    transform: translateY(-4px);
+}
+
+.project h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    letter-spacing: -.06em;
+    line-height: 1;
+    margin: auto 0 20px;
+}
+
+.project p:not(.project-type) {
+    color: var(--muted);
+    font-size: .8rem;
+    line-height: 1.7;
+    max-width: 480px;
+}
+
+.project-number {
+    bottom: 48px;
+    color: var(--yellow);
+    font-size: .65rem;
+    position: absolute;
+    right: 48px;
+}
+
+.experience-item {
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    gap: 50px;
+    grid-template-columns: minmax(220px, 1fr) 2fr;
+    padding: 26px 0;
+}
+
+.experience-item:first-of-type {
+    border-top: 1px solid var(--line);
+}
+
+.experience-item h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.experience-item p {
+    color: var(--muted);
+    font-size: .78rem;
+    line-height: 1.7;
+}
+
+.experience-item > div:first-child p {
+    color: var(--yellow);
+    font-size: .67rem;
+    margin-top: 5px;
+}
+
+.skill-groups {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skill-groups > div > p {
+    margin-bottom: 18px;
+}
+
+.skills {
+    display: grid;
+    gap: 9px;
+}
+
+.skill {
+    color: var(--muted);
+    font-size: .8rem;
+}
+
+.contact-content h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    letter-spacing: -.08em;
+    line-height: .9;
+    margin-bottom: 30px;
+}
+
+.contact-content > p {
+    color: var(--muted);
+    font-size: .8rem;
+    line-height: 1.7;
+    max-width: 470px;
+}
+
+.email-link {
+    border-bottom: 1px solid var(--yellow);
+    display: inline-block;
+    font-size: .78rem;
+    margin-top: 34px;
+    padding-bottom: 6px;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+@media (max-width: 700px) {
+    .projects,
+    .skill-groups {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        min-height: 300px;
+        padding: 30px;
+    }
+
+    .project-number {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .experience-item {
+        display: block;
+    }
+
+    .experience-item > div:last-child {
+        margin-top: 16px;
+    }
+}
