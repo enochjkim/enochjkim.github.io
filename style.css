@@ -130,3 +130,67 @@ body {
     .contact-content { margin-left: 0; }
     .site-footer .container { align-items: flex-start; flex-direction: column; gap: 5px; }
 }
+
+/* Technical index treatment */
+:root {
+    --ink: #161616;
+    --muted: #6f6f6b;
+    --line: #cfcfca;
+    --paper: #f2f1ec;
+    --accent: #e04b2f;
+}
+
+body { font-family: "Courier New", Courier, monospace; background: var(--paper); }
+.container { width: min(1180px, calc(100% - 48px)); }
+.site-header { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.logo { font-size: .8rem; letter-spacing: .04em; }
+.logo-mark { color: var(--accent); }
+.site-header nav { gap: 24px; }
+.site-header nav a, .eyebrow, .project-type, .section-index { font-size: .7rem; letter-spacing: .04em; }
+.hero { padding: 150px 0 125px; }
+.hero h1 { font-family: "Courier New", Courier, monospace; font-size: clamp(3.8rem, 11vw, 9.5rem); font-weight: 700; letter-spacing: -.12em; line-height: .88; margin: 25px 0 48px; }
+.hero-bottom { align-items: flex-start; }
+.hero-description { font-size: .9rem; line-height: 1.7; max-width: 510px; }
+.hero-meta { display: flex; gap: 35px; }
+.hero-meta div { border-left: 1px solid var(--line); display: flex; flex-direction: column; padding-left: 12px; }
+.hero-meta strong { font-size: .75rem; }
+.hero-meta span { color: var(--muted); font-size: .65rem; margin-top: 6px; }
+.section-line { border-top: 1px solid var(--line); padding: 72px 0; }
+.section-heading { grid-template-columns: 44px 1fr; margin-bottom: 32px; }
+.section-heading h2 { font-family: "Courier New", Courier, monospace; font-size: .8rem; font-weight: 400; letter-spacing: .04em; }
+.projects { background: transparent; border: 0; display: block; }
+.project { background: transparent; border-top: 1px solid var(--line); min-height: 0; padding: 22px 0 28px; transition: padding-left .2s ease, background .2s ease; }
+.project:last-child { border-bottom: 1px solid var(--line); }
+.project:hover { background: transparent; padding-left: 12px; }
+.project h3 { font-family: "Courier New", Courier, monospace; font-size: clamp(1.5rem, 4vw, 2.3rem); font-weight: 700; letter-spacing: -.08em; margin: 13px 0 9px; }
+.project p:not(.project-type) { font-size: .82rem; line-height: 1.65; max-width: 650px; }
+.project-number { bottom: 28px; color: var(--muted); font-family: "Courier New", Courier, monospace; font-size: .7rem; right: 0; }
+.experience-item { border-bottom: 1px solid var(--line); border-top: 0; grid-template-columns: minmax(250px, 1fr) 2fr; gap: 45px; padding: 22px 0; }
+.experience-item:first-of-type { border-top: 1px solid var(--line); }
+.experience-item h3 { font-family: "Courier New", Courier, monospace; font-size: .9rem; }
+.experience-item p { font-size: .8rem; line-height: 1.65; }
+.experience-item > div:first-child p { font-size: .68rem; }
+.skills-section .section-heading { margin-bottom: 32px; }
+.skill-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+.skill-groups > div > p { color: var(--muted); font-size: .68rem; margin-bottom: 15px; }
+.skills { display: grid; gap: 7px; }
+.skill { background: transparent; border: 0; font-size: .8rem; padding: 0; }
+.about-grid { grid-template-columns: 1fr 2fr; }
+.about-copy { font-family: "Courier New", Courier, monospace; font-size: clamp(1.05rem, 2.5vw, 1.6rem); line-height: 1.5; }
+.contact-content { margin-left: 64px; }
+.contact-content h3 { font-family: "Courier New", Courier, monospace; font-size: clamp(2.3rem, 6vw, 5rem); font-weight: 700; letter-spacing: -.12em; }
+.contact-content > p { font-size: .8rem; line-height: 1.7; }
+.email-link { font-size: .8rem; }
+.site-footer { border-top: 1px solid var(--line); }
+
+@media (max-width: 700px) {
+    .container { width: calc(100% - 36px); }
+    .site-header nav { gap: 10px 16px; }
+    .hero { padding: 95px 0 85px; }
+    .hero h1 { font-size: clamp(3.4rem, 18vw, 6rem); }
+    .hero-meta { margin-top: 30px; }
+    .section-line { padding: 58px 0; }
+    .skill-groups { grid-template-columns: 1fr; gap: 30px; }
+    .about-grid { display: block; }
+    .contact-content { margin-left: 0; }
+}
