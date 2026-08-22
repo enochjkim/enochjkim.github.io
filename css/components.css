@@ -1,27 +1,53 @@
 .projects {
     display: grid;
-    gap: 28px;
+    gap: 18px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project {
-    background: var(--panel);
+    background: rgba(13, 27, 43, .96);
     border: 1px solid var(--line);
     display: flex;
     flex-direction: column;
-    min-height: 360px;
-    padding: 48px;
+    min-height: 340px;
+    padding: 38px;
     position: relative;
     transition: border-color .2s ease, transform .2s ease;
 }
 
 .project:hover {
     border-color: var(--yellow);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .2);
     transform: translateY(-4px);
 }
 
+.project::before {
+    background: var(--signal);
+    content: "";
+    height: 100%;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: 4px;
+}
+
+.project::after {
+    color: var(--line);
+    content: "STATUS / READY";
+    font-size: .58rem;
+    position: absolute;
+    right: 38px;
+    top: 38px;
+}
+
+.project:hover::after {
+    color: var(--signal);
+    content: "STATUS / ACTIVE";
+}
+
 .project h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    font-family: "Segoe UI", Tahoma, sans-serif;
     font-size: clamp(1.7rem, 4vw, 3rem);
     letter-spacing: -.06em;
     line-height: 1;
@@ -30,17 +56,29 @@
 
 .project p:not(.project-type) {
     color: var(--muted);
-    font-size: .8rem;
+    font-size: .86rem;
     line-height: 1.7;
     max-width: 480px;
 }
 
+.project p:not(.project-type),
+.experience-item p,
+.contact-content > p,
+.site-footer {
+    font-weight: 450;
+}
+
 .project-number {
-    bottom: 48px;
+    bottom: 38px;
     color: var(--yellow);
     font-size: .65rem;
     position: absolute;
-    right: 48px;
+    right: 38px;
+}
+
+.project-type {
+    color: var(--yellow);
+    font-weight: 700;
 }
 
 .experience-item {
@@ -52,17 +90,21 @@
 }
 
 .experience-item:first-of-type {
-    border-top: 1px solid var(--line);
+    border-top: 2px solid var(--navy);
+}
+
+.experience-item {
+    background: rgba(13, 27, 43, .38);
 }
 
 .experience-item h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Tahoma, sans-serif;
     font-size: 1rem;
 }
 
 .experience-item p {
     color: var(--muted);
-    font-size: .78rem;
+    font-size: .84rem;
     line-height: 1.7;
 }
 
@@ -88,12 +130,13 @@
 }
 
 .skill {
-    color: var(--muted);
-    font-size: .8rem;
+    color: var(--white);
+    font-size: .86rem;
 }
 
 .contact-content h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    font-family: "Segoe UI", Tahoma, sans-serif;
     font-size: clamp(2.5rem, 7vw, 6rem);
     letter-spacing: -.08em;
     line-height: .9;

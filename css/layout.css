@@ -1,9 +1,19 @@
 .site-header {
-    background: rgba(243, 244, 240, .94);
-    border-bottom: 1px solid var(--line);
+    background: var(--navy);
+    border-bottom: 1px solid #263b54;
     position: sticky;
     top: 0;
     z-index: 10;
+}
+
+.site-header::after {
+    background: var(--signal);
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 72px;
 }
 
 .site-header .container {
@@ -14,6 +24,7 @@
 }
 
 .logo {
+    color: var(--white);
     font-size: .78rem;
     font-weight: 700;
     letter-spacing: .06em;
@@ -45,14 +56,29 @@
 }
 
 .hero {
-    min-height: 720px;
-    padding: 180px 0 120px;
+    min-height: 680px;
+    padding: 170px 0 110px;
+    position: relative;
+}
+
+.hero::after {
+    background: var(--yellow);
+    content: "MISSION SYSTEMS / AEROSPACE ENGINEERING";
+    color: var(--white);
+    font-family: "Courier New", Courier, monospace;
+    font-size: .58rem;
+    letter-spacing: .12em;
+    padding: 8px 12px;
+    position: absolute;
+    right: 0;
+    top: 112px;
 }
 
 .hero h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    font-family: "Segoe UI", Tahoma, sans-serif;
     font-size: clamp(4.2rem, 12vw, 10.5rem);
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -.09em;
     line-height: .82;
     margin: 28px 0 65px;
@@ -67,9 +93,16 @@
 
 .hero-description {
     color: var(--muted);
-    font-size: .84rem;
+    font-size: .92rem;
+    font-weight: 450;
     line-height: 1.7;
     max-width: 510px;
+}
+
+.hero-description::before {
+    color: var(--yellow);
+    content: "// ";
+    font-family: "Courier New", Courier, monospace;
 }
 
 .hero-meta {
@@ -95,7 +128,7 @@
 
 .section-line {
     border-top: 1px solid var(--line);
-    padding: 100px 0;
+    padding: 92px 0;
 }
 
 .section-heading {
@@ -111,6 +144,13 @@
     letter-spacing: .1em;
 }
 
+.section-heading::after {
+    border-bottom: 1px solid var(--line);
+    content: "";
+    grid-column: 1 / -1;
+    margin-top: 4px;
+}
+
 .about-grid {
     display: grid;
     gap: 60px;
@@ -122,7 +162,7 @@
 }
 
 .about-copy {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Tahoma, sans-serif;
     font-size: clamp(1.4rem, 3vw, 2.3rem);
     line-height: 1.25;
 }
@@ -133,7 +173,8 @@
 }
 
 .site-footer {
-    border-top: 1px solid var(--line);
+    background: var(--navy);
+    border-top: 2px solid var(--yellow);
     color: var(--muted);
     font-size: .65rem;
     padding: 25px 0;
@@ -160,6 +201,12 @@
     .hero {
         min-height: 0;
         padding: 110px 0 90px;
+    }
+
+    .hero::after {
+        font-size: .5rem;
+        right: 18px;
+        top: 88px;
     }
 
     .hero h1 {
