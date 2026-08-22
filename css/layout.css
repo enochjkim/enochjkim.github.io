@@ -7,7 +7,7 @@
 }
 
 .site-header::after {
-    background: var(--signal);
+    background: var(--flame-gradient);
     content: "";
     height: 2px;
     left: 0;
@@ -205,8 +205,8 @@
 
     .hero::after {
         font-size: .5rem;
-        right: 18px;
-        top: 88px;
+        right: 24px;
+        top: 18px;
     }
 
     .hero h1 {

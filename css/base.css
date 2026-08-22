@@ -10,9 +10,12 @@
     --white: #eceef1;
     --muted: #9b9ea4;
     --line: #2a2c30;
-    --yellow: #718097;
+    --yellow: #8b929c;
     --navy: #151619;
-    --signal: #9aa4b4;
+    --signal: #a6adb7;
+    --blue-deep: #1434A4;
+    --blue-light: #7d9fe8;
+    --flame-gradient: linear-gradient(90deg, #3b4d78 0%, #75654f 52%, #70433f 100%);
     --max-width: 1100px;
 }
 
@@ -28,11 +31,11 @@ body {
 }
 
 body::before {
-    background-image: linear-gradient(#181a1d 1px, transparent 1px), linear-gradient(90deg, #181a1d 1px, transparent 1px);
-    background-size: 48px 48px;
+    background-image: linear-gradient(rgba(120, 128, 142, .12) 1px, transparent 1px), linear-gradient(90deg, rgba(120, 128, 142, .12) 1px, transparent 1px);
+    background-size: 64px 64px;
     content: "";
     inset: 0;
-    opacity: .45;
+    opacity: .35;
     pointer-events: none;
     position: fixed;
     z-index: -1;

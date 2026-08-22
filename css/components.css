@@ -5,7 +5,7 @@
 }
 
 .project {
-    background: rgba(13, 27, 43, .96);
+    background: var(--panel);
     border: 1px solid var(--line);
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
 }
 
 .project::before {
-    background: var(--signal);
+    background: linear-gradient(180deg, #3b4d78 0%, #75654f 52%, #70433f 100%);
     content: "";
     height: 100%;
     left: -1px;
