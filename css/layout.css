@@ -63,7 +63,7 @@
 
 .hero::after {
     background: var(--yellow);
-    content: "MISSION SYSTEMS / AEROSPACE ENGINEERING";
+    content: "RESEARCH / DESIGN / TEST";
     color: var(--white);
     font-family: "Courier New", Courier, monospace;
     font-size: .58rem;
