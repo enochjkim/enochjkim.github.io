@@ -74,7 +74,7 @@
     top: 112px;
 }
 
-/* --- SVG PATH DRAWING WITH SOLID FILL --- */
+/* --- SVG STROKE-ONLY GLOW & DRAW ANIMATION --- */
 .hero .hero-heading {
     display: inline-block;
     width: 100%;
@@ -90,33 +90,38 @@
     overflow: visible;
 }
 
-.hero .svg-text-line {
+/* Common Font Settings */
+.hero .svg-text-base,
+.hero .svg-text-stroke {
     font-family: "Segoe UI", Tahoma, sans-serif;
     font-weight: 900;
     font-size: 130px;
     letter-spacing: -0.06em;
+    pointer-events: visiblePainted;
+}
+
+/* Base Text: Pure Solid White */
+.hero .svg-text-base {
     fill: var(--white);
+}
+
+/* Stroke Layer: Invisible by Default */
+.hero .svg-text-stroke {
+    fill: none;
     stroke: transparent;
     stroke-width: 0px;
-    
-    /* Prepare stroke dash properties for drawing effect */
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
-    
-    pointer-events: visiblePainted;
-    transition: stroke-width 0.3s ease;
 }
 
-/* Trigger self-drawing line animation while keeping white fill */
-.hero .hero-heading:hover .svg-text-line {
-    fill: var(--white);
+/* Hover State: Trigger Animated Stroke & Glow on Outline Only */
+.hero .hero-heading:hover .svg-text-stroke {
     stroke: url(#flame-grad);
     stroke-width: 1.5px;
-    filter: url(#glow) drop-shadow(0px 0px 8px rgba(114, 149, 255, 0.5));
-    animation: strokeDraw 6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    filter: url(#glow) drop-shadow(0px 0px 6px rgba(114, 149, 255, 0.6));
+    animation: strokeDraw 7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* Keyframe animation drawing the outline over solid text */
 @keyframes strokeDraw {
     0% {
         stroke-dashoffset: 1000;
