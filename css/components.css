@@ -12,23 +12,51 @@
     min-height: 340px;
     padding: 38px;
     position: relative;
-    transition: border-color .2s ease, transform .2s ease;
+    /* Keeps the gradient pseudo-element clipped cleanly around corners */
+    overflow: hidden; 
+    transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow .25s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color .25s ease;
 }
 
+/* Gradient outline overlay (default state: visible only on left edge) */
+.project::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(
+        180deg, 
+        #f0a896 0%, 
+        #bca5f0 18%, 
+        #7295ff 50%, 
+        #5080f5 100%
+    );
+
+    /* Webkit (Safari/Chrome) */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+
+    /* Standard Properties (Clears the VS Code warning) */
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    
+    clip-path: inset(0 calc(100% - 4px) 0 0);
+    transition: clip-path 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                opacity 0.35s ease;
+    pointer-events: none;
+}
+
+/* Hover state: expands the gradient bar into a full card outline */
 .project:hover {
-    border-color: var(--yellow);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, .2);
+    border-color: transparent;
+    box-shadow: 0 14px 30px rgba(80, 128, 245, 0.15);
     transform: translateY(-4px);
 }
 
-.project::before {
-    background: linear-gradient(180deg, #e8b4a6 0%, #c6bced 28%, #789ce4 52%, #e8b08f 76%, #8ba7e5 100%);
-    content: "";
-    height: 100%;
-    left: -1px;
-    position: absolute;
-    top: -1px;
-    width: 4px;
+.project:hover::before {
+    /* Reveals the complete gradient outline around all four sides */
+    clip-path: inset(0 0 0 0);
 }
 
 .project::after {
