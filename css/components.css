@@ -22,7 +22,7 @@
 }
 
 .project::before {
-    background: linear-gradient(180deg, #3b4d78 0%, #75654f 52%, #70433f 100%);
+    background: linear-gradient(180deg, #e8b4a6 0%, #c6bced 28%, #789ce4 52%, #e8b08f 76%, #8ba7e5 100%);
     content: "";
     height: 100%;
     left: -1px;

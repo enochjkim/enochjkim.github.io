@@ -15,7 +15,7 @@
     --signal: #a6adb7;
     --blue-deep: #1434A4;
     --blue-light: #7d9fe8;
-    --flame-gradient: linear-gradient(90deg, #3b4d78 0%, #75654f 52%, #70433f 100%);
+    --flame-gradient: linear-gradient(90deg, #e8b4a6 0%, #c6bced 28%, #789ce4 52%, #e8b08f 76%, #8ba7e5 100%);
     --max-width: 1100px;
 }
 
