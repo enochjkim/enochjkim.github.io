@@ -68,7 +68,7 @@
 
 .hero::after {
     background: var(--yellow);
-    content: "UPDATED: 2026-08-23";
+    content: "UPDATED: 2026-09-05";
     color: var(--white);
     font-family: "Courier New", Courier, monospace;
     font-size: .58rem;
