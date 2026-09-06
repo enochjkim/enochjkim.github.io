@@ -68,7 +68,25 @@ const createGalleryCard = ({ image, title, text, alt }) => {
     return card;
 };
 
-const createDocumentCard = ({ file, title, text, label }) => {
+const createDocumentCard = ({ file, title, text, label, embed }) => {
+    if (embed) {
+        const container = document.createElement('div');
+        container.className = 'project-document-embed';
+        container.innerHTML = `
+            <div class="project-document-header">
+                <span class="project-document-type"></span>
+                <strong></strong>
+                <span class="project-document-description"></span>
+            </div>
+            <iframe src="${file}" class="project-document-pdf" title="Document PDF"></iframe>
+        `;
+        container.querySelector('.project-document-type').textContent =
+            file.toLowerCase().endsWith('.pdf') ? 'PRESENTATION / PDF' : 'PRESENTATION / PPTX';
+        container.querySelector('strong').textContent = title;
+        container.querySelector('.project-document-description').textContent = text;
+        return container;
+    }
+
     const card = document.createElement('a');
     card.className = 'project-document';
     card.href = file;

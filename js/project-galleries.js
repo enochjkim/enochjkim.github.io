@@ -182,7 +182,7 @@ const projectGalleries = {
             file: "Projects/NASA%20Research/NASA%20Presentation.pdf",
             title: "NASA internship final presentation",
             text: "D307 intern symposium presentation on sustainable composite materials research.",
-            label: "OPEN PRESENTATION"
+            embed: true
         }
     ],
     analysis: [

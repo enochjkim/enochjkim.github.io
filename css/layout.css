@@ -498,6 +498,19 @@
     outline-offset: 3px;
 }
 
+.resume-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.resume-pdf {
+    border: 1px solid var(--line);
+    display: block;
+    height: 900px;
+    width: 100%;
+}
+
 .project-document {
     background: linear-gradient(135deg, rgba(240, 168, 150, .1), rgba(80, 128, 245, .14));
     border: 1px solid var(--line);
@@ -519,6 +532,24 @@
     transform: translateY(-2px);
 }
 
+.project-document-embed {
+    grid-column: 1 / -1;
+}
+
+.project-document-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.project-document-pdf {
+    border: 1px solid var(--line);
+    display: block;
+    height: 700px;
+    width: 100%;
+}
+
 .project-document-type,
 .project-document-action {
     color: var(--yellow);
@@ -537,6 +568,18 @@
     color: var(--muted);
     font-size: .75rem;
     margin-bottom: 16px;
+}
+
+.project-document-header .project-document-type {
+    font-size: .65rem;
+}
+
+.project-document-header strong {
+    margin: 6px 0 3px;
+}
+
+.project-document-header .project-document-description {
+    margin-bottom: 14px;
 }
 
 .project-gallery figcaption {
