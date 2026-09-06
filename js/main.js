@@ -68,18 +68,43 @@ const createGalleryCard = ({ image, title, text, alt }) => {
     return card;
 };
 
+const createDocumentCard = ({ file, title, text, label }) => {
+    const card = document.createElement('a');
+    card.className = 'project-document';
+    card.href = file;
+    card.target = '_blank';
+    card.rel = 'noopener';
+    card.innerHTML = `
+        <span class="project-document-type"></span>
+        <strong></strong>
+        <span class="project-document-description"></span>
+        <span class="project-document-action"></span>
+    `;
+    card.querySelector('.project-document-type').textContent =
+        file.toLowerCase().endsWith('.pdf') ? 'PRESENTATION / PDF' : 'PRESENTATION / PPTX';
+    card.querySelector('strong').textContent = title;
+    card.querySelector('.project-document-description').textContent = text;
+    card.querySelector('.project-document-action').textContent = label || 'OPEN FILE';
+    return card;
+};
+
 const renderGalleries = () => {
     document.querySelectorAll('.project-gallery').forEach((gallery) => {
-        const images = (projectGalleries[gallery.dataset.project] || [])
+        const media = projectGalleries[gallery.dataset.project] || [];
+        const images = media
             .filter((item) => item.image && galleryImageExtensions.test(item.image));
+        const documents = media.filter((item) => item.file);
 
-        if (!images.length) {
+        if (!images.length && !documents.length) {
             gallery.classList.add('is-empty');
             gallery.innerHTML = '<span>ADD PHOTOS / PROJECT GALLERY</span>';
             return;
         }
 
-        gallery.append(...images.map(createGalleryCard));
+        gallery.append(
+            ...images.map(createGalleryCard),
+            ...documents.map(createDocumentCard)
+        );
     });
 };
 

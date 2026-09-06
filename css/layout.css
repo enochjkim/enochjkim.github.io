@@ -234,6 +234,22 @@
     grid-template-columns: minmax(0, 1fr);
 }
 
+.project-details:nth-child(3) {
+    order: 5;
+}
+
+.project-details:nth-child(4) {
+    order: 4;
+}
+
+.project-details:nth-child(5) {
+    order: 3;
+}
+
+.project-details:nth-child(6) {
+    order: 6;
+}
+
 
 /* =========================================
    PROJECT BOX
@@ -480,6 +496,47 @@
 .project-gallery figure:focus-visible {
     outline: 2px solid var(--yellow);
     outline-offset: 3px;
+}
+
+.project-document {
+    background: linear-gradient(135deg, rgba(240, 168, 150, .1), rgba(80, 128, 245, .14));
+    border: 1px solid var(--line);
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -1;
+    justify-content: center;
+    min-height: 150px;
+    padding: 22px;
+    position: relative;
+    text-decoration: none;
+    transition: border-color .2s ease, transform .2s ease;
+}
+
+.project-document:hover,
+.project-document:focus-visible {
+    border-color: var(--yellow);
+    transform: translateY(-2px);
+}
+
+.project-document-type,
+.project-document-action {
+    color: var(--yellow);
+    font-family: "Courier New", Courier, monospace;
+    font-size: .62rem;
+    letter-spacing: .08em;
+}
+
+.project-document strong {
+    color: var(--white);
+    font-size: 1.05rem;
+    margin: 10px 0 5px;
+}
+
+.project-document-description {
+    color: var(--muted);
+    font-size: .75rem;
+    margin-bottom: 16px;
 }
 
 .project-gallery figcaption {

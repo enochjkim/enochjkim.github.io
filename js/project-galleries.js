@@ -177,7 +177,14 @@ const projectGalleries = {
             alt: "SR6 rocket fins"
         }
     ],
-    nasa: [],
+    nasa: [
+        {
+            file: "Projects/NASA%20Research/NASA%20Presentation.pdf",
+            title: "NASA internship final presentation",
+            text: "D307 intern symposium presentation on sustainable composite materials research.",
+            label: "OPEN PRESENTATION"
+        }
+    ],
     analysis: [
         {
             image: "Projects/Analysis%20%26%20Simulation/MACH4FinCFD.png",
